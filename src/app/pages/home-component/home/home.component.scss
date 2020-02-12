@@ -49,19 +49,11 @@ $bird-width: 960px;
   }
 
   .section {
-    padding: 50px 5%;
+    padding: 50px 15%;
 
-    &.content {
-        .text {
-            text-align: center;
-        }
-    }
-
-    &.grid {
+    .grid {
         display: flex;
         flex-wrap: wrap;
-        padding: 0 10%;
-
         > .cell {
           width: 33.33333333333%;
 
@@ -82,6 +74,17 @@ $bird-width: 960px;
         .image {
           width: 100%;
         }
+    }
+
+    .periscope {
+        height: 650px;
+        width: 650px;
+        background-image: url('../../../../assets/images/model2.jpg');
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        border-radius: 50%;
+        margin: 100px auto;
     }
   }
 }
