@@ -3,81 +3,80 @@ $logo-height: 100px;
 $bird-width: 960px;
 
 .home {
-  position: relative;
-  width: 100%;
+    position: relative;
+    width: 100%;
+    .header {
+        position: relative; // header will be an anchor for contained elements
+        height: $header-height;
+        background-image: url('../../../../assets/images/bird-bg.jpg');
+        background-size: auto $header-height;
+        background-position: top center;
+        background-attachment: fixed;
+        overflow: hidden;
 
-  .header {
-    position: relative; // header will be an anchor for contained elements
-    height: $header-height;
-    background-image: url('../../../../assets/images/bird-bg.jpg');
-    background-size: auto $header-height;
-    background-position: top center;
-    background-attachment: fixed;
-    overflow: hidden;
+        .logo {
+            position: absolute;
+            height: $logo-height;
+            width: 100%;
+            background-image: url('../../../../assets/images/black-bird-logo.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            top: 50%;
+            margin-top: -$logo-height / 2;
+        }
 
-    .logo {
-      position: absolute;
-      height: $logo-height;
-      width: 100%;
-      background-image: url('../../../../assets/images/black-bird-logo.svg');
-      background-position: center;
-      background-repeat: no-repeat;
-      top: 50%;
-      margin-top: -$logo-height / 2;
-    }
+        .foreground-bird {
+            position: absolute;
+            width: $bird-width;
+            height: 733px;
+            background-image: url('../../../../assets/images/fore-bird.png');
+            background-repeat: no-repeat;
+            background-position: right bottom;
+            left: 60%;
+            top: 300px;
+            margin-left: -$bird-width / 2;
+        }
 
-    .foreground-bird {
-      position: absolute;
-      width: $bird-width;
-      height: 733px;
-      background-image: url('../../../../assets/images/fore-bird.png');
-      background-repeat: no-repeat;
-      background-position: right bottom;
-      left: 60%;
-      top: 300px;
-      margin-left: -$bird-width / 2;
-    }
-
-    .background-bird {
-      position: absolute;
-      height: 298px;
-      width: $bird-width;
-      background-image: url('../../../../assets/images/back-bird.png');
-      background-repeat: no-repeat;
-      left: 50%;
-      margin-left: -$bird-width / 2;
-    }
+        .background-bird {
+            position: absolute;
+            height: 298px;
+            width: $bird-width;
+            background-image: url('../../../../assets/images/back-bird.png');
+            background-repeat: no-repeat;
+            left: 50%;
+            margin-left: -$bird-width / 2;
+        }
   }
 
   .section {
     padding: 50px 5%;
 
     &.content {
-      .text {
-        text-align: center;
-      }
+        .text {
+            text-align: center;
+        }
     }
 
     &.grid {
-      display: flex;
-      flex-wrap: wrap;
-      padding: 0 10%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 10%;
 
-        .cell {
+        > .cell {
           width: 33.33333333333%;
 
-          figure {
-            position: relative;
-            margin: 20px;
-            opacity: 0;
-            transform: translateX(100px);
-            transition: all 0.3s ease-in-out;
+            > figure {
+                position: relative;
+                margin: 20px;
+                opacity: 0;
+                transform: translateX(100px);
+                transition: all 0.3s ease-in-out;
 
-            &.isShowing {
-              opacity: 1;
-              transform: translateX(0px);
+                &.isShowing {
+                    opacity: 1;
+                    transform: translateX(0px);
+                }
             }
-          }
         }
 
         .image {

@@ -7,16 +7,16 @@ import { HomeComponent } from './pages/home-component/home/home.component';
 import { ScrollAnimationDirective } from './directives/scroll-animation.directive';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    ScrollAnimationDirective
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HomeComponent,
+        ScrollAnimationDirective
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

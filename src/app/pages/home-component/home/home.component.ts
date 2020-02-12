@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit {
             this.figuresState.push(false);
         });
     }
+
     translateY(element: ElementRef, renderer?: Renderer2, props?: { factor: number }): void {
         const scrollY = window.pageYOffset;
         const { factor } = props;
@@ -26,10 +27,8 @@ export class HomeComponent implements OnInit {
     }
 
     setFigureState(state: boolean, i: number,): void {
-        if (state) {
-            setTimeout(() => {
-                this.figuresState[i] = state;
-            }, 150 * (i + 1));
-        }
+        setTimeout(() => {
+            this.figuresState[i] = state;
+        }, 150 * (i + 1));
     }
 }
