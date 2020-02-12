@@ -61,6 +61,7 @@ $bird-width: 960px;
     &.grid {
       display: flex;
       flex-wrap: wrap;
+      padding: 0 10%;
 
         .cell {
           width: 33.33333333333%;
@@ -69,8 +70,8 @@ $bird-width: 960px;
             position: relative;
             margin: 20px;
             opacity: 0;
-            transform: translateX(20px);
-            transition: all 1 ease-in-out;
+            transform: translateX(100px);
+            transition: all 0.3s ease-in-out;
 
             &.isShowing {
               opacity: 1;
