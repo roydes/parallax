@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit {
         renderer.setStyle(element.nativeElement, 'transform', `translateY(${scrollTop / factor}%)`);
     }
 
-    movePersicopeBackgroundUp(
+    movePersicopeBackgroundUp (
         element: ElementRef,
         renderer: Renderer2,
         scrollPosition: { scrollLeft: number, scrollTop: number },
