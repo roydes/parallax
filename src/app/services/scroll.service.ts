@@ -14,5 +14,4 @@ export class ScrollService {
             scrollTop: window.pageYOffset || document.documentElement.scrollTop
         }
     }
-
 }
