@@ -1,10 +1,10 @@
 import { Directive, ElementRef, Renderer2, HostListener, Input, Output, EventEmitter } from '@angular/core';
 
 @Directive({
-    selector: '[appScrollAnimation]'
+    selector: '[appParallax]'
 })
-export class ScrollAnimationDirective {
-    @Input('appScrollAnimation') animation: Function;
+export class ParallaxDirective {
+    @Input('appParallax') animation: Function;
     @Input('scrolledChecker') scrolledChecker: Function;
     @Input('animationExtras') extras: string;
     @Input('checkIfScrolled') checkIfScrolled: boolean;
