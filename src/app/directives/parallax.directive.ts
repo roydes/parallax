@@ -28,5 +28,4 @@ export class ParallaxDirective {
             this.scrolledOver.emit(viewPortHeight > elementRect.top && elementRect.bottom > 0);
         }
     }
-
 }
