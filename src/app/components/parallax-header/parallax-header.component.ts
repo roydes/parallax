@@ -13,6 +13,13 @@ export class ParallaxHeaderComponent implements OnInit, ParallaxElement {
 
     ngOnInit() { }
 
+    /**
+     * Move an elemente in Y axis with factor
+     * @param element
+     * @param renderer
+     * @param scrollPosition
+     * @param extras
+     */
     parallaxAnimationHandler(
         element: ElementRef,
         renderer: Renderer2,
