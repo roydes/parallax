@@ -10,11 +10,12 @@ export class PeriscopeComponent implements OnInit {
     @Input() buttonText: string;
     @Input() imageSrc: string;
     periscopeState: boolean;
+    backgroundImage: string;
 
     constructor() { }
 
     ngOnInit() {
-
+        this.backgroundImage = `url(${this.imageSrc})`;
     }
 
     movePeriscopeBackgroundUp (
