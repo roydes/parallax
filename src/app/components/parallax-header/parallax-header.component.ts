@@ -14,7 +14,7 @@ export class ParallaxHeaderComponent implements OnInit, ParallaxElement {
     ngOnInit() { }
 
     /**
-     * Move an elemente in Y axis with factor
+     * Move an element in Y axis with a factor speed
      * @param element
      * @param renderer
      * @param scrollPosition
