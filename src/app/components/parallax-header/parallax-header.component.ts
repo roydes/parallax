@@ -1,6 +1,7 @@
 import { Component, OnInit, ElementRef, Renderer2 } from '@angular/core';
 
 import { ParallaxElement } from '../../interfaces/parallax-element.interface'
+import { ScrollService } from '../../services/scroll.service';
 
 @Component({
     selector: 'parallax-header',
@@ -9,7 +10,7 @@ import { ParallaxElement } from '../../interfaces/parallax-element.interface'
 })
 
 export class ParallaxHeaderComponent implements OnInit, ParallaxElement {
-    constructor() { }
+    constructor(private scrollService: ScrollService) { }
 
     ngOnInit() { }
 
@@ -23,11 +24,10 @@ export class ParallaxHeaderComponent implements OnInit, ParallaxElement {
     parallaxAnimationHandler(
         element: ElementRef,
         renderer: Renderer2,
-        scrollPosition: { scrollLeft: number, scrollTop: number },
         extras: { factor: number }
     ): void {
         const { factor } = extras;
-        const { scrollTop } = scrollPosition;
+        const { scrollTop } = this.scrollService.getScrollPosition();
 
         renderer.setStyle(element.nativeElement, 'transform', `translateY(${scrollTop / factor}%)`);
     }

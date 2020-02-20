@@ -18,14 +18,10 @@ export class ParallaxDirective {
     @HostListener('window:scroll')
     onScroll() {
         const elementRect = this.element.nativeElement.getBoundingClientRect();
-        const scrollPosition = {
-            scrollLeft: window.pageXOffset || document.documentElement.scrollLeft,
-            scrollTop: window.pageYOffset || document.documentElement.scrollTop
-        }
         const viewPortHeight = window.innerHeight;
 
         if (this.animation) {
-            this.animation(this.element, this.renderer, scrollPosition, this.extras);
+            this.animation(this.element, this.renderer, this.extras);
         }
 
         if (this.checkIfScrolled) {

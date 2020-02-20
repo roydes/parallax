@@ -7,7 +7,6 @@ export declare interface ParallaxElement {
     parallaxAnimationHandler(
         element: ElementRef,
         renderer: Renderer2,
-        scrollPosition?: { scrollLeft: number, scrollTop: number },
         extras?: { factor: number }
     ): void;
 }
