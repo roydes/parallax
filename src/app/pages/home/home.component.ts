@@ -10,7 +10,6 @@ import { HomeConstants } from './home.constants';
 export class HomeComponent implements OnInit {
     constants = HomeConstants;
     figuresState = [];
-    periscopeState: boolean;
 
     constructor() { }
 
@@ -26,10 +25,6 @@ export class HomeComponent implements OnInit {
         }, 150 * (i + 1));
     }
 
-    setPeriscopeState(state: boolean): void {
-        this.periscopeState = state;
-    }
-
     translateY(
         element: ElementRef, renderer: Renderer2,
         scrollPosition: { scrollLeft: number, scrollTop: number },
@@ -39,23 +34,5 @@ export class HomeComponent implements OnInit {
         const { scrollTop } = scrollPosition;
 
         renderer.setStyle(element.nativeElement, 'transform', `translateY(${scrollTop / factor}%)`);
-    }
-
-    movePersicopeBackgroundUp (
-        element : ElementRef,
-        renderer: Renderer2,
-        scrollPosition: { scrollLeft: number,  scrollTop: number },
-        extras?: { isBeingScrolled: boolean, factor: number }
-    ): void {
-        const { isBeingScrolled } = extras;
-        const viewPortHeight = window.innerHeight;
-        const nativeElement = element.nativeElement;
-        const elementTop = nativeElement.getBoundingClientRect().top;
-        const opacity = (viewPortHeight - elementTop) / (viewPortHeight);
-
-        if (isBeingScrolled) {
-            renderer.setStyle(element.nativeElement, 'background-position', `center ${viewPortHeight - elementTop}px`);
-            renderer.setStyle(nativeElement.children.item(0), 'opacity', opacity);
-        }
     }
 }

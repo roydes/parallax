@@ -44,17 +44,11 @@
                 <hr>
             </div>
 
-            <!-- Parallax persicope -->
-            <div class="periscope"
-                [appScrollAnimation]="movePersicopeBackgroundUp"
-                (scrolledOver)="setPeriscopeState($event)"
-                [checkIfScrolled]="true"
-                [animationExtras]="{ isBeingScrolled: periscopeState, factor: 3 }">
-                <div class="promo-content">
-                    <p class="text">Fall Suits <strong><span>from </span>$99</strong></p>
-                    <a class="shop-now">Shop Now</a>
-                </div>
-            </div>
+            <app-periscope
+                imageSrc="'assets/images/model3.jpg'"
+                promoTitle="Fall suits"
+                buttonText="Shop now"
+            ></app-periscope>
         </article>
     </section>
 

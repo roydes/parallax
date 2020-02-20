@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ScrollAnimationDirective } from './directives/scroll-animation.directive';
+import { PeriscopeComponent } from './components/periscope/periscope.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         HomeComponent,
-        ScrollAnimationDirective
+        ScrollAnimationDirective,
+        PeriscopeComponent
     ],
     imports: [
         BrowserModule,
