@@ -1,11 +1,15 @@
 $header-height: 600px;
 $logo-height: 100px;
 $bird-width: 960px;
+$bird-bg-image: '../../../assets/images/bird-bg.jpg';
+$bird-logo-image: '../../../assets/images/black-bird-logo.svg';
+$fore-bird-image: '../../../assets/images/fore-bird.png';
+$back-bird-image: '../../../assets/images/back-bird.png';
 
 .header {
-    position: relative; // header will be an anchor for contained elements
+    position: relative;
     height: $header-height;
-    background-image: url('../../../assets/images/bird-bg.jpg');
+    background-image: url($bird-bg-image);
     background-size: auto $header-height;
     background-position: top center;
     background-attachment: fixed;
@@ -13,34 +17,34 @@ $bird-width: 960px;
 
     .logo {
         position: absolute;
+        top: 50%;
         height: $logo-height;
         width: 100%;
-        background-image: url('../../../assets/images/black-bird-logo.svg');
+        margin-top: -$logo-height / 2;
+        background-image: url($bird-logo-image);
         background-position: center;
         background-repeat: no-repeat;
-        top: 50%;
-        margin-top: -$logo-height / 2;
     }
 
     .foreground-bird {
         position: absolute;
-        width: $bird-width;
-        height: 733px;
-        background-image: url('../../../assets/images/fore-bird.png');
-        background-repeat: no-repeat;
-        background-position: right bottom;
         left: 60%;
         top: 300px;
+        width: $bird-width;
+        height: 733px;
         margin-left: -$bird-width / 2;
+        background-image: url($fore-bird-image);
+        background-repeat: no-repeat;
+        background-position: right bottom;
     }
 
     .background-bird {
         position: absolute;
+        left: 50%;
         height: 298px;
         width: $bird-width;
-        background-image: url('../../../assets/images/back-bird.png');
-        background-repeat: no-repeat;
-        left: 50%;
         margin-left: -$bird-width / 2;
+        background-image: url($back-bird-image);
+        background-repeat: no-repeat;
     }
 }

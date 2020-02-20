@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './pages/home/home.component';
 import { ParallaxDirective } from './directives/parallax.directive';
 import { ParallaxHeaderComponent } from './components/parallax-header/parallax-header.component';
@@ -11,8 +11,8 @@ import { ParallaxHeaderComponent } from './components/parallax-header/parallax-h
     declarations: [
         AppComponent,
         HomeComponent,
-        ParallaxHeaderComponent,
-        ParallaxDirective
+        ParallaxDirective,
+        ParallaxHeaderComponent
     ],
     imports: [
         BrowserModule,
