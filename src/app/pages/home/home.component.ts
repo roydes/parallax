@@ -33,7 +33,6 @@ export class HomeComponent implements OnInit {
     movePersicopeBackgroundUp (
         element : ElementRef,
         renderer: Renderer2,
-        scrollPosition: { scrollLeft: number,  scrollTop: number },
         extras?: { isBeingScrolled: boolean, factor: number }
     ): void {
         const { isBeingScrolled } = extras;
