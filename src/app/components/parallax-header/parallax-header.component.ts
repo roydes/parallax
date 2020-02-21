@@ -12,14 +12,15 @@ import { ScrollService } from '../../services/scroll.service';
 export class ParallaxHeaderComponent implements OnInit, ParallaxElement {
     constructor(private scrollService: ScrollService) { }
 
-    ngOnInit() { }
+    ngOnInit() {
+        this.parallaxAnimationHandler = this.parallaxAnimationHandler.bind(this);
+    }
 
     /**
      * Move an element in Y axis with a factor speed
-     * @param element
-     * @param renderer
-     * @param scrollPosition
-     * @param extras
+     * @param {ElementRef} element
+     * @param {Renderer2} renderer
+     * @param {Object} extras
      */
     parallaxAnimationHandler(
         element: ElementRef,

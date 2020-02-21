@@ -3,10 +3,14 @@ import { TestBed, ComponentFixture, async } from '@angular/core/testing';
 
 import { ParallaxDirective } from '../../directives/parallax.directive';
 import { ParallaxHeaderComponent } from './parallax-header.component';
+import { ScrollService } from '../../services/scroll.service';
 
 describe('ParallaxHeaderComponent', () => {
     const elementRefStub = {
         nativeElement: document.createElement('DIV')
+    }
+    const scrollServiceStub = {
+        getScrollPosition: () => { return {scrollLeft: 0, scrollTop: 1} }
     }
     let component: ParallaxHeaderComponent;
     let fixture: ComponentFixture<ParallaxHeaderComponent>;
@@ -20,7 +24,8 @@ describe('ParallaxHeaderComponent', () => {
             ],
             providers: [
                 Renderer2,
-                { provide: ElementRef, useValue: elementRefStub }
+                { provide: ElementRef, useValue: elementRefStub },
+                { provide: ScrollService, useValue: scrollServiceStub }
             ]
         }).compileComponents();
     }));
@@ -37,11 +42,11 @@ describe('ParallaxHeaderComponent', () => {
     });
 
     it('should handle parallax animation', () => {
+        component.ngOnInit();
         component.parallaxAnimationHandler(
             elementRefStub,
             renderer,
-            { scrollLeft: 0, scrollTop: 1 },
-            { factor: 4}
+            { factor: 4 }
         );
 
         expect(elementRefStub.nativeElement.style.transform).toBe('translateY(0.25%)');

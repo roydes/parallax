@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './pages/home/home.component';
 import { ParallaxDirective } from './directives/parallax.directive';
 import { ParallaxHeaderComponent } from './components/parallax-header/parallax-header.component';
+import { ScrollService } from './services/scroll.service';
 
 @NgModule({
     declarations: [
@@ -18,7 +19,7 @@ import { ParallaxHeaderComponent } from './components/parallax-header/parallax-h
         BrowserModule,
         AppRoutingModule
     ],
-    providers: [],
+    providers: [ScrollService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
