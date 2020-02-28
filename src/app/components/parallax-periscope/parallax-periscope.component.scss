@@ -1,0 +1,60 @@
+.periscope {
+    position: relative;
+    height: 560px;
+    width: 560px;
+    background-image: url('../../../assets/images/model2.jpg');
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    background-size: contain;
+    border-radius: 50%;
+    margin: 0px auto 100px auto;
+    overflow: hidden;
+
+    .promo-content {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0,0,0,0.5);
+        border-radius: 50%;
+
+        > .text {
+            color: white;
+            font-size: 50px;
+            font-weight: 100;
+            line-height: 1.2;
+
+            > strong {
+                display: block;
+                font-size: 30px;
+                font-weight: 700;
+            }
+
+            span {
+                font-weight: 300;
+                font-size: 18px;
+                font-style: italic;
+                color: rgba(255, 255, 255, 0.5)
+            }
+        }
+
+        .shop-now {
+            font-size: 20px;
+            text-decoration: none;
+            color: white;
+            border: 1px solid white;
+            padding: 10px 20px;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                color: black;
+                background: white;
+            }
+        }
+    }
+}

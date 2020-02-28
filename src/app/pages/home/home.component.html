@@ -1,19 +1,6 @@
 <div class="home">
     <!-- Parallax header with animated elements -->
-    <header class="header">
-        <div class="logo"
-            [appScrollAnimation]="translateY"
-            [animationExtras]="{ factor: 2 }">
-        </div>
-        <div class="background-bird"
-                [appScrollAnimation]="translateY"
-                [animationExtras]="{ factor: 4 }">
-        </div>
-        <div class="foreground-bird"
-            [appScrollAnimation]="translateY"
-            [animationExtras]="{ factor: -40 }">
-        </div>
-    </header>
+    <parallax-header></parallax-header>
 
     <section class="section">
         <article>
@@ -27,7 +14,7 @@
             <!-- Parallax landing elements -->
             <div class="grid">
                 <div class="cell" *ngFor="let model of constants.MODELS_DATA; let i = index">
-                    <figure appScrollAnimation
+                    <figure appParallax
                         (scrolledOver)="setFigureState($event, i)"
                         [checkIfScrolled]="true"
                         [ngClass]="{'isShowing': figuresState[i]}">
@@ -45,16 +32,11 @@
             </div>
 
             <!-- Parallax persicope -->
-            <div class="periscope"
-                [appScrollAnimation]="movePersicopeBackgroundUp"
-                (scrolledOver)="setPeriscopeState($event)"
-                [checkIfScrolled]="true"
-                [animationExtras]="{ isBeingScrolled: periscopeState, factor: 3 }">
-                <div class="promo-content">
-                    <p class="text">Fall Suits <strong><span>from </span>$99</strong></p>
-                    <a class="shop-now">Shop Now</a>
-                </div>
-            </div>
+            <parallax-periscope
+                [buttonText]="'Shop now'"
+                [imageSrc]=""
+                [promoTitle]="'Fall suits'">
+            </parallax-periscope>
         </article>
     </section>
 

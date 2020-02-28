@@ -1,0 +1,11 @@
+<div class="periscope"
+    [style.backgroundImage]="'url(' + imageSrc + ')'"
+    [appParallax]="applyPeriscopeEffect"
+    [checkIfScrolled]="true"
+    [animationExtras]="{ isBeingScrolled: periscopeState, factor: 3 }"
+    (scrolledOver)="setPeriscopeState($event)">
+    <div class="promo-content">
+        <p class="text">{{ promoTitle }}</p>
+        <a class="shop-now">{{ buttonText }}</a>
+    </div>
+</div>

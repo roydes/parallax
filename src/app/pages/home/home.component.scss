@@ -1,0 +1,63 @@
+$header-height: 600px;
+$logo-height: 100px;
+$bird-width: 960px;
+
+.home {
+    position: relative;
+    width: 100%;
+
+  .section {
+    padding: 50px 15%;
+    margin-bottom: 700px;
+
+    .grid {
+        display: flex;
+        flex-wrap: wrap;
+        > .cell {
+          width: 33.33333333333%;
+
+            > figure {
+                position: relative;
+                margin: 20px;
+                opacity: 0;
+                transform: translateX(100px);
+                transition: all 0.3s ease-in-out;
+                overflow: hidden;
+
+                &.isShowing {
+                    opacity: 1;
+                    transform: translateX(0px);
+                }
+
+                &:hover {
+                    figcaption {
+                        left: 0%
+                    }
+
+                    img {
+                        transform: scale(1.2);
+                    }
+                }
+            }
+
+            > figure > figcaption {
+                position: absolute;
+                bottom: 10px;
+                left: -100%;
+                transition: all 0.3s ease-in-out;
+                background: black;
+                color: white;
+                padding: 2px 8px;
+                font-size: 11px;
+            }
+
+            > figure > img {
+                display: block;
+                width: 100%;
+                transform: scale(1);
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+  }
+}
