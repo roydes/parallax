@@ -1,14 +1,14 @@
 import { Component, OnInit, ElementRef, Renderer2, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-periscope',
-  templateUrl: './periscope.component.html',
-  styleUrls: ['./periscope.component.scss']
+  selector: 'parallax-periscope',
+  templateUrl: './parallax-periscope.component.html',
+  styleUrls: ['./parallax-periscope.component.scss']
 })
-export class PeriscopeComponent implements OnInit {
-    @Input() promoTitle: string;
+export class ParallaxPeriscopeComponent implements OnInit {
     @Input() buttonText: string;
     @Input() imageSrc: string;
+    @Input() promoTitle: string;
     periscopeState: boolean;
 
     constructor() { }
@@ -17,10 +17,9 @@ export class PeriscopeComponent implements OnInit {
 
     }
 
-    movePeriscopeBackgroundUp (
-        element : ElementRef,
+    applyPeriscopeEffect(
+        element: ElementRef,
         renderer: Renderer2,
-        scrollPosition: { scrollLeft: number,  scrollTop: number },
         extras?: { isBeingScrolled: boolean, factor: number }
     ): void {
         const { isBeingScrolled } = extras;

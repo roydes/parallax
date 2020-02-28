@@ -1,18 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './pages/home/home.component';
-import { ScrollAnimationDirective } from './directives/scroll-animation.directive';
-import { PeriscopeComponent } from './components/periscope/periscope.component';
+import { ParallaxDirective } from './directives/parallax.directive';
+import { ParallaxHeaderComponent } from './components/parallax-header/parallax-header.component';
+import { ParallaxPeriscopeComponent } from './components/parallax-periscope/parallax-periscope.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         HomeComponent,
-        ScrollAnimationDirective,
-        PeriscopeComponent
+        ParallaxDirective,
+        ParallaxHeaderComponent,
+        ParallaxPeriscopeComponent
     ],
     imports: [
         BrowserModule,

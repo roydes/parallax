@@ -3,9 +3,9 @@
     height: 560px;
     width: 560px;
     background-image: url('../../../assets/images/model2.jpg');
-    background-position: top center;
     background-repeat: repeat-y;
     background-attachment: fixed;
+    background-size: contain;
     border-radius: 50%;
     margin: 0px auto 100px auto;
     overflow: hidden;
