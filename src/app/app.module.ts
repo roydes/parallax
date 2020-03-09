@@ -1,18 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { HomeComponent } from './pages/home/home.component';
-import { ParallaxDirective } from './directives/parallax.directive';
-import { ParallaxHeaderComponent } from './components/parallax-header/parallax-header.component';
+import { AppComponent } from './app.component';
+import { HomeComponent } from './pages/home-component/home/home.component';
+import { ScrollAnimationDirective } from './directives/scroll-animation.directive';
 
 @NgModule({
     declarations: [
         AppComponent,
         HomeComponent,
-        ParallaxDirective,
-        ParallaxHeaderComponent
+        ScrollAnimationDirective
     ],
     imports: [
         BrowserModule,
